@@ -393,10 +393,9 @@ static AudioFileTypeID exportAudioFileIDs[NUM_EXPORT_TYPES] =
 	NSNumber* creatorCode = [NSNumber numberWithUnsignedLong:'C=64'];
 	NSNumber* typeCode = [NSNumber numberWithUnsignedLong:'C64F'];
 	NSDictionary* attributes = @{NSFileHFSCreatorCode: creatorCode, NSFileHFSTypeCode: typeCode};
-	[[NSFileManager defaultManager] changeFileAttributes:attributes atPath:destinationPath];
-
+    [[NSFileManager defaultManager] setAttributes:attributes ofItemAtPath:destinationPath error:nil];
+    
 	NSImage* icon = [[NSWorkspace sharedWorkspace] iconForFile:destinationPath];
-	[icon setScalesWhenResized:NO];
 	icon.size = NSMakeSize(32, 32);
 	[self setFileIcon:icon];
 
@@ -477,7 +476,6 @@ static AudioFileTypeID exportAudioFileIDs[NUM_EXPORT_TYPES] =
 		err = ExtAudioFileCreateNew(&directoryFileRef, (__bridge CFStringRef)filename, exportAudioFileIDs[exportSettings.mFileType], &outputFormat, NULL, &outputFileRef);		
 
 		NSImage* icon = [[NSWorkspace sharedWorkspace] iconForFile:destinationPath];
-		[icon setScalesWhenResized:NO];
 		icon.size = NSMakeSize(32, 32);
 		[self performSelectorOnMainThread:@selector(setFileIcon:) withObject:icon waitUntilDone:NO];
 
@@ -638,7 +636,6 @@ static AudioFileTypeID exportAudioFileIDs[NUM_EXPORT_TYPES] =
 	FILE* outputFileHandle = fopen(destinationPath.fileSystemRepresentation, "wb");
 
 	NSImage* icon = [[NSWorkspace sharedWorkspace] iconForFile:destinationPath];
-	[icon setScalesWhenResized:NO];
 	icon.size = NSMakeSize(32, 32);
 	[self performSelectorOnMainThread:@selector(setFileIcon:) withObject:icon waitUntilDone:NO];
 
