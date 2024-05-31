@@ -5,8 +5,8 @@ Since it seems that Sidplay 4.2 (http://www.sidmusic.org/sidplay/mac/) is no lon
 
 # asid support
 Implementation of the asid midi protocol as a sound device in sidplay.
-Adapted code from Sidplay4, implemented by Thorsten Klose on 15/10/09.
-Adapted for Sidplay5 by Rio Rattenrudel.
+
+The ASID protocol was invented in 2003 by Jouni Paulus and implemented by Thorsten Klose on 15/10/09 for Sidplay4 and adapted for Sidplay5 (updated Sidplay version by Alexander Coers) by Rio Rattenrudel.
 
 The ASID protocol transmits MIDI data in real time, which is sent to hardware (such as therapsid, midibox sid, sidstation) that can play or even remix (applies to therapsid) sid tunes. This would be a good resource for people who own such hardware in use with a Mac as Intel/Apple Silicon build. 
 
