@@ -31,6 +31,6 @@ It still needs [midi_patchbay](https://github.com/rio-rattenrudel/midi_patchbay/
 
 # still need to fix
 * Xcode still complains about missing UI constraints and OpenGL
-* info window still shows misplaced visual objects (minor)
+* ~~info window still shows misplaced visual objects (minor)~~
 * ~~starting with macOS 11, the toolbar height is smaller and the track info is cut off, stepping through subtunes is now a little bit tricky~~
 
