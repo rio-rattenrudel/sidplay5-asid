@@ -12,6 +12,8 @@ The ASID protocol transmits MIDI data in real time, which is sent to hardware (s
 
 It still needs [midi_patchbay](https://github.com/rio-rattenrudel/midi_patchbay/tree/master) to map ASID to your Midi equip!
 
+* install xcode and load sidplay project
+* to compile for the first time, add your Apple developer account for the team and your developer's signing certificate in the build settings for it's target
 * compile/start midi_patchbay
 * compile/start Sidplay5 (asid)
 * configure midi_patchbay with the MIDI input as ASID OUT and set the MIDI output to your MIDI interface
