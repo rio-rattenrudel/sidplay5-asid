@@ -1,3 +1,5 @@
+***this branch is based on an earlier version of sidplay5 (it only exists here for archiving reasons)***
+
 # sidplay5
 Sidplay for macOS
 
